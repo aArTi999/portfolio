@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarti Sharma - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-indigo-600">Aarti Sharma</h1>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-indigo-600 transition">About</a>
+                    <a href="#experience" class="hover:text-indigo-600 transition">Experience</a>
+                    <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+                    <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+                    <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+                </nav>
+                <button class="md:hidden" id="menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section id="about" class="flex flex-col md:flex-row items-center gap-12 mb-20">
+            <div class="md:w-1/3 flex justify-center">
+                <img src="./assets/Image.jpg" alt="Aarti Sharma" class="rounded-full w-64 h-64 object-cover border-4 border-indigo-100 shadow-lg">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-4xl font-bold mb-4">Aarti Sharma</h2>
+                <h3 class="text-2xl text-indigo-600 mb-6">Frontend Developer</h3>
+                <p class="text-lg mb-6">
+                    Frontend Developer with 3+ years of experience specializing in React.js, Next.js, and TypeScript for building scalable, 
+                    high-performance web applications. Proven track record in delivering responsive, user-centric solutions for banking and retail clients.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="mailto:aartisharma0799@gmail.com" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                        <i data-feather="mail"></i>
+                        <span>Contact Me</span>
+                    </a>
+                    <a href="https://linkedin.com/in/aarti-sharma-281438215" target="_blank" class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-full flex items-center space-x-2">
+                        <i data-feather="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Professional Experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="flex border-b border-gray-200 mb-6">
+                    <button class="tab-btn active px-6 py-3 font-medium text-indigo-600 border-b-2 border-indigo-600" data-tab="accenture">Accenture</button>
+                    <button class="tab-btn px-6 py-3 font-medium text-gray-500 hover:text-indigo-600" data-tab="infosys">Infosys</button>
+                </div>
+
+                <div id="accenture" class="tab-content active">
+                    <h3 class="text-xl font-semibold mb-2">Packaged App Development Analyst</h3>
+                    <p class="text-gray-600 mb-4">Sep 2024 – Present</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Building scalable e-commerce and retail solutions using React, Next.js, Redux, GraphQL, and TypeScript.</li>
+                        <li>Developed inventory management system with real-time stock tracking, reducing manual errors by 30%.</li>
+                        <li>Streamlined stock updates & syncing, improving data accuracy and operational efficiency.</li>
+                        <li>Collaborated with cross-functional teams to deliver production-ready features on tight deadlines.</li>
+                    </ul>
+                </div>
+
+                <div id="infosys" class="tab-content">
+                    <h3 class="text-xl font-semibold mb-2">Senior System Engineer</h3>
+                    <p class="text-gray-600 mb-4">Dec 2021 – Aug 2024</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Led frontend development for banking client portals using React.js, Redux, and REST APIs.</li>
+                        <li>Enhanced merchant servicing portal for account inquiries and ticket resolution.</li>
+                        <li>Built arrival/departure service portal for airline partner, enabling PNR-based flight management.</li>
+                        <li>Introduced React Testing Library & Jest, improving test coverage and accessibility compliance.</li>
+                        <li>Maintained 99% application uptime through proactive issue resolution.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition cursor-default">
+                    <div class="text-indigo-600 mb-3">
+                        <i data-feather="code" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Frontend</h3>
+                    <p class="text-sm text-gray-600">React.js, Next.js, Redux, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition cursor-default">
+                    <div class="text-indigo-600 mb-3">
+                        <i data-feather="database" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Backend & APIs</h3>
+                    <p class="text-sm text-gray-600">GraphQL, RESTful APIs</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition cursor-default">
+                    <div class="text-indigo-600 mb-3">
+                        <i data-feather="check-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Testing</h3>
+                    <p class="text-sm text-gray-600">Jest, React Testing Library, Enzyme</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition cursor-default">
+                    <div class="text-indigo-600 mb-3">
+                        <i data-feather="tool" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">DevOps & Tools</h3>
+                    <p class="text-sm text-gray-600">Jenkins, Docker, Git, GitHub, Storybook</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-2 text-indigo-600">Supermarket E-commerce</h3>
+                    <p class="mb-4">Built a full-featured inventory system with real-time item scanning, improving stock visibility and reducing manual errors.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">React</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Next.js</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">GraphQL</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-2 text-indigo-600">Merchant Servicing Portal</h3>
+                    <p class="mb-4">Designed responsive UI for customer support, account inquiries, and ticket resolution, reducing resolution time.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">React</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Redux</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">REST API</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-2 text-indigo-600">Arrival/Departure Service Portal</h3>
+                    <p class="mb-4">Enabled PNR-based flight management (add/update/cancel), streamlining agent-customer interactions.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">React</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">TypeScript</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Jest</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-indigo-50 rounded-2xl p-8 md:p-12">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">Get In Touch</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium">
+                        Send Message
+                    </button>
+                </form>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="mailto:aartisharma0799@gmail.com" class="text-gray-700 hover:text-indigo-600">
+                        <i data-feather="mail" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/aarti-sharma-281438215" target="_blank" class="text-gray-700 hover:text-indigo-600">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://github.com/aArTi999" target="_blank" class="text-gray-700 hover:text-indigo-600">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Aarti Sharma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize feather icons
+            feather.replace();
+            
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            menuBtn.addEventListener('click', function() {
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('hidden');
+                nav.classList.toggle('flex');
+                nav.classList.toggle('flex-col');
+                nav.classList.toggle('absolute');
+                nav.classList.toggle('top-16');
+                nav.classList.toggle('right-6');
+                nav.classList.toggle('bg-white');
+                nav.classList.toggle('p-4');
+                nav.classList.toggle('rounded-lg');
+                nav.classList.toggle('shadow-lg');
+                nav.classList.toggle('space-y-4');
+                nav.classList.toggle('space-x-0');
+            });
+
+            // Tab functionality
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active classes from all buttons and tabs
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'text-indigo-600', 'border-indigo-600');
+                        btn.classList.add('text-gray-500');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'text-indigo-600', 'border-indigo-600');
+                    this.classList.remove('text-gray-500');
+                    
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+                    
+                    // Show selected tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
